@@ -13,7 +13,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  Widget _addBlocs(Widget child) {
+  Widget _addLogic(Widget child) {
     return MultiProvider(providers: [
       Provider(
         create: (_) => Api(
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
     final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
     final navigator = LibraryNavigator(navigatorKey);
 
-    return _addBlocs(MaterialApp(
+    return _addLogic(MaterialApp(
       navigatorKey: navigatorKey,
       title: 'Flutter Demo',
       theme: luniiTheme,
